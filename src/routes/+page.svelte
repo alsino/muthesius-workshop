@@ -62,20 +62,40 @@
 <style>
    @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;700&family=IBM+Plex+Sans&family=Martian+Mono&display=swap');
 
+
+    
+
    h1, h2{
     font-family: 'DM Mono', monospace;
+    /* color: #8330FE; */
+    margin: 0.5em 0;
    }
+
+
+
+   h2 {
+    margin-bottom: 2em;
+   }
+
 
   .wrapper {
     font-family: 'DM Sans', sans-serif;
     line-height: 1.5;
-    padding: 1em 5em 5em 5em ;
+    padding: 1.5em 5em 5em 5em ;
   }
 
   .grid {
     margin-top: 1em;
     display: flex;
    justify-content: space-between;
+  }
+
+  .project {
+    color: #8330FE;
+  }
+
+  .project:hover{
+    color: #0D00C2;
   }
 
   
