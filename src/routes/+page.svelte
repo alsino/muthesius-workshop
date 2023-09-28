@@ -5,35 +5,33 @@
       title: "Bäume in Hamburg",
       subtitle: "A cool project",
       authors: "Kim, Peter",
-      url: "http://www.google.de"
+      url: "https://www.google.de"
     },
     {
       title: "Neubau in Kiel",
       subtitle: "A cool project",
       authors: "Kim, Peter",
-      url: "http://www.google.de"
+      url: "https://www.google.de"
     },
     {
       title: "Femizide in Deutschland",
       subtitle: "A cool project",
       authors: "Kim, Peter",
-      url: "http://www.google.de"
+      url: "https://www.google.de"
     },
     {
       title: "Badestellen in Kiel",
       subtitle: "A cool project",
       authors: "Kim, Peter", 
-      url: "http://www.google.de"
+      url: "https://www.google.de"
     }
   ]
 </script>
 
-
-
 <div class="wrapper">
 
   <h1>The Invisible Map</h1>
-  <h2>Visualizing spatial contrasts with open data and web maps</h2>
+  <h3>Visualizing spatial contrasts with open data and web maps</h3>
   <div>
     This course is an introduction to the world of web mapping and geospatial data visualization. We will explore different urban and social phenomena by mapping highly contrasting datasets, which can tell interesting stories about our world. For example, how could we compare different speeds of a city (slow vs. fast), varying levels of openness of space (public vs. private), the different histories of its parts (east vs. west), the age of the architecture (old vs. new) or any other type of contrast imaginable. Topics can be simple or complex, at the local or global scale.
   </div>
@@ -65,16 +63,10 @@
 
     
 
-   h1, h2{
-    font-family: 'DM Mono', monospace;
-    /* color: #8330FE; */
+   h1 {
+    /* font-family: 'DM Mono', monospace; */
+    font-family: 'DM Sans', sans-serif;
     margin: 0.5em 0;
-   }
-
-
-
-   h2 {
-    margin-bottom: 2em;
    }
 
 
