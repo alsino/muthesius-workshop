@@ -2,24 +2,28 @@
 
   let projects = [
     {
-      title: "Project 1",
+      title: "Bäume in Hamburg",
       subtitle: "A cool project",
-      authors: "Kim, Peter"
+      authors: "Kim, Peter",
+      url: "http://www.google.de"
     },
     {
-      title: "Project 2",
+      title: "Neubau in Kiel",
       subtitle: "A cool project",
-      authors: "Kim, Peter"
+      authors: "Kim, Peter",
+      url: "http://www.google.de"
     },
     {
-      title: "Project 3",
+      title: "Femizide in Deutschland",
       subtitle: "A cool project",
-      authors: "Kim, Peter"
+      authors: "Kim, Peter",
+      url: "http://www.google.de"
     },
     {
-      title: "Project 4",
+      title: "Badestellen in Kiel",
       subtitle: "A cool project",
-      authors: "Kim, Peter"
+      authors: "Kim, Peter", 
+      url: "http://www.google.de"
     }
   ]
 </script>
@@ -34,17 +38,17 @@
     This course is an introduction to the world of web mapping and geospatial data visualization. We will explore different urban and social phenomena by mapping highly contrasting datasets, which can tell interesting stories about our world. For example, how could we compare different speeds of a city (slow vs. fast), varying levels of openness of space (public vs. private), the different histories of its parts (east vs. west), the age of the architecture (old vs. new) or any other type of contrast imaginable. Topics can be simple or complex, at the local or global scale.
   </div>
   <br>
-  <!-- <div>
-    A main objective of the course is to give an introduction to a couple of different mapping tools (open source where possible), which can be used to create interactive maps on different devices. These tools are easy to handle, even if you have little or no background in programming, but can also be used for more advanced projects by expanding the functionalities with code. The course will also show you where to find open geodata (i.e. OpenStreetMap) and how to use it in conjunction with these tools.
-  </div> -->
 
   <section class="grid">
     {#each projects as proj}
-    <a href="#" class="project">
-      <img src="https://placehold.co/300x300" alt="">
-      <div class="title">{proj.title}</div>
-      <div>{proj.subtitle}</div>
-      <div>{proj.authors}</div>
+    <a target="_blank" href={proj.url} class="project">
+      <div class="project-container">
+        <img src="https://placehold.co/300x300" alt="" >
+        <div class="title">{proj.title}</div>
+        <div>{proj.subtitle}</div>
+        <div>{proj.authors}</div>
+      </div>
+      
     </a>
     {/each}
     
@@ -74,6 +78,13 @@
    justify-content: space-between;
   }
 
+  
+  .project-container{
+    /* padding: 2em; */
+    /* border-radius: 5px; */
+    /* box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); */
+  }
+
   .title {
     font-weight: bold;
   }
@@ -81,4 +92,6 @@
   a{
     text-decoration: none;
   }
+
+ 
 </style>
