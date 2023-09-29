@@ -2,28 +2,32 @@
 
   let projects = [
     {
-      title: "Bäume in Hamburg",
-      subtitle: "A cool project",
-      authors: "Kim, Peter",
-      url: "https://www.google.de"
+      title: "Gaardener Neubaumonitor",
+      subtitle: "Große Neubauprojekte verändern den Stadt-und Sozialraum Gaards nachhaltig und zeigen schon jetzt ihren Einfluss auf die Lebensrealitäten der Anwohner*innen.",
+      authors: "Flora Wedel, Carolin Birkners",
+      url: "https://www.google.de",
+      img: "neubau.png"
     },
     {
-      title: "Neubau in Kiel",
-      subtitle: "A cool project",
-      authors: "Kim, Peter",
-      url: "https://www.google.de"
+      title: "Schnelle Badung",
+      subtitle: "Kiel liegt direkt an der Ostsee, aber nur ein kleiner Bereich ist zum Baden zugänglich. Finde heraus welcher Badeort am schnellsten erreichbar ist",
+      authors: "Mialena Kneschke, Adrian Herzig", 
+      url: "https://adriangreyish.github.io/Wepmapping_Badestellen/",
+      img: "badung.png"
     },
     {
-      title: "Femizide in Deutschland",
-      subtitle: "A cool project",
-      authors: "Kim, Peter",
-      url: "https://www.google.de"
+      title: "Femizide in Deutschland 2023 – One Billion Rising",
+      subtitle: "Invisible map der globalen Initiative “One Billion Rising” gegen Gewalt an Frauen und Mädchen in Deutschland 2023 ",
+      authors: "Selina Meier, Levke Ohm, Ainoa Policke",
+      url: "https://ainoaplck.github.io/intro-code/",
+      img: "onebillion.png"
     },
     {
-      title: "Badestellen in Kiel",
-      subtitle: "A cool project",
-      authors: "Kim, Peter", 
-      url: "https://www.google.de"
+      title: "Public Trees of Hamburg",
+      subtitle: "Mapping Hamburg’s trees by location, size and age.",
+      authors: "Emily Steiner, Gunnar Kähler",
+      url: "https://www.google.de",
+      img: "baum.png"
     }
   ]
 </script>
@@ -33,7 +37,7 @@
   <h1>The Invisible Map</h1>
   <h3>Visualizing spatial contrasts with open data and web maps</h3>
   <div>
-    This course is an introduction to the world of web mapping and geospatial data visualization. We will explore different urban and social phenomena by mapping highly contrasting datasets, which can tell interesting stories about our world. For example, how could we compare different speeds of a city (slow vs. fast), varying levels of openness of space (public vs. private), the different histories of its parts (east vs. west), the age of the architecture (old vs. new) or any other type of contrast imaginable. Topics can be simple or complex, at the local or global scale.
+    These are the project results of the 1-week workshop <span style="font-style:italic;">»The Invisible Map - Visualizing spatial contrasts with open data and web maps«</span>, held at Muthesius Kunshochschule in Kiel, Germany from 25 - 29 September 2023. This course was an introduction to the world of web mapping and geospatial data visualization. The students explored different urban and social phenomena by mapping highly contrasting datasets using open data sources, which can tell interesting stories about our world and highlight social issues. Below the selection of the different projects produced during the workshop week.
   </div>
   <br>
 
@@ -41,10 +45,10 @@
     {#each projects as proj}
     <a target="_blank" href={proj.url} class="project">
       <div class="project-container">
-        <img src="https://placehold.co/300x300" alt="" >
+        <img src={proj.img} alt="" class="img">
         <div class="title">{proj.title}</div>
         <div>{proj.subtitle}</div>
-        <div>{proj.authors}</div>
+        <div class="authors">{proj.authors}</div>
       </div>
       
     </a>
@@ -77,32 +81,40 @@
   }
 
   .grid {
-    margin-top: 1em;
+    margin-top: 2em;
     display: flex;
-   justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .project {
-    color: #8330FE;
+    color: black;
+    margin-bottom: 3em;
+    max-width: 600px;
+    transition: all 0.5s;
   }
 
-  .project:hover{
-    color: #0D00C2;
+  .project:hover {
+    transform: translateY(-5px);
   }
 
   
-  .project-container{
-    /* padding: 2em; */
-    /* border-radius: 5px; */
-    /* box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); */
-  }
-
   .title {
     font-weight: bold;
   }
 
   a{
     text-decoration: none;
+  }
+
+  .authors {
+    font-style: italic;
+    margin-top: 0.5em;;
+  }
+
+  img {
+    width: 550px;
+    height: auto;
   }
 
  
