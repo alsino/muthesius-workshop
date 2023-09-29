@@ -26,7 +26,7 @@
       title: "Public Trees of Hamburg",
       subtitle: "Mapping Hamburg’s trees by location, size and age.",
       authors: "Emily Steiner, Gunnar Kähler",
-      url: "https://www.google.de",
+      url: "https://baum-map2.vercel.app/",
       img: "baum.png"
     }
   ]
